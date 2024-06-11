@@ -32,11 +32,6 @@
       "static/chunks/main-app.js",
       "static/css/app/[lng]/(mainLayout)/auth/register/page.css",
       "static/chunks/app/[lng]/(mainLayout)/auth/register/page.js"
-    ],
-    "/[lng]/(mainLayout)/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[lng]/(mainLayout)/page.js"
     ]
   }
 }
