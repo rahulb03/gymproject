@@ -330,7 +330,7 @@ export const PROFILE_BASE_URL = 'http://localhost:4200/api/frontend/'
 
 // export const SIGNIN_API = 'http://localhost:4200/api/frontend/auth/signup';
 
-export const SIGNIN_API =  API_BASE_URL + 'auth/signup';
+ export const SIGNIN_API =  API_BASE_URL + 'auth/signup';
 
 
 

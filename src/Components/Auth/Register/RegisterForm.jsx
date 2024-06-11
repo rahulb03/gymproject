@@ -1,62 +1,47 @@
-import React, { useContext, useState } from 'react';
-
+import React, { useContext } from 'react';
 import axios from 'axios';
-
 import { Form, Formik } from 'formik';
 import { Col, Input, Label } from 'reactstrap';
 import { useTranslation } from '@/app/i18n/client';
 import I18NextContext from '@/Helper/I18NextContext';
-import { YupObject, emailSchema, nameSchema, passwordConfirmationSchema, passwordSchema, phoneSchema } from '@/Utils/Validation/ValidationSchemas';
+import { YupObject, emailSchema, nameSchema, passwordSchema, phoneSchema } from '@/Utils/Validation/ValidationSchemas';
 import FormBtn from '@/Components/Common/FormBtn';
 import SimpleInputField from '@/Components/Common/InputFields/SimpleInputField';
 import { SIGNIN_API } from '@/Config/Constant';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import { onChange } from 'react-toastify/dist/core/store';
-
 
 const RegisterForm = () => {
   const { i18Lang } = useContext(I18NextContext);
   const { t } = useTranslation(i18Lang, 'common');
-  const {name , setName} = useState();
-  const {email , setEmail} = useState();
-  const {password , setPassword} = useState();
-  const {phone , setPhone} = usestate();
-  
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  try {
+  const handleSubmit = async (values, { setSubmitting }) => {
+    try {
+      const response = await axios.post(SIGNIN_API, {
+        name: values.name,
+        email: values.email,
+        password: values.password,
+        phone: values.phone,
+        country_code: values.country_code,
+      });
 
-    const res = await axios.post(SIGNIN_API , {
-       name , 
-       email , 
-       password ,
-       phone ,
-
-    });
-    
-    if(res && res.data.success){
-      toast.success(res.data && res.data.message);
-
-    } else{
-      toast.error(res.data.message);
+      if (response.status === 200) {
+        toast.success(t('SignupSuccessful'));
+      } else {
+        toast.error(t('SignupFailed'));
+      }
+    } catch (error) {
+      toast.error(t('SignupFailed'));
+    } finally {
+      setSubmitting(false);
     }
-  } catch (error) {
-     console.log(error);
-     toast.error("registration failed ");
-  }
-
-};
-
- 
+  };
 
   return (
     <>
       <ToastContainer />
       <Formik
-     
-     initialValues={{
+        initialValues={{
           name: '',
           email: '',
           password: '',
@@ -69,40 +54,35 @@ const handleSubmit = async (e) => {
           password: passwordSchema,
           phone: phoneSchema,
         })}
-       onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
       >
-        {({  handleSubmit}) => (
-          <Form className='row g-md-4 g-3' onSubmit={handleSubmit}>
-            <SimpleInputField 
+        {({ isSubmitting }) => (
+          <Form className='row g-md-4 g-3'>
+            <SimpleInputField
               nameList={[
-               
-                { name: 'name',
-                   placeholder: t('FullName'),
-                    title: 'Name', 
-                    label: 'Full Name' 
-                    // onchange: (e)  , 
-   
-                  },
-              
-                  { name: 'email', 
-                    placeholder: t('EmailAddress'),
-                     title: 'Email', 
-                     label: 'Email Address'
-                     },
+                {
+                  name: 'name',
+                  placeholder: t('FullName'),
+                  title: 'Name',
+                  label: 'Full Name',
+                },
+                {
+                  name: 'email',
+                  placeholder: t('EmailAddress'),
+                  title: 'Email',
+                  label: 'Email Address',
+                },
               ]}
             />
-           
+
             <Col xs='12'>
-            
               <div className='country-input' style={{ position: 'relative' }}>
-               
                 <div className='form-control' style={{ display: 'flex', alignItems: 'left', width: "93px", height: '58px', borderRadius: '5px', position: 'absolute', zIndex: '1', padding: 'auto' }}>
                   <div className='country-code' style={{ fontSize: '17px' }}> + 91</div>
                 </div>
-              
+
                 <SimpleInputField
-                
-                nameList={[
+                  nameList={[
                     {
                       name: 'phone',
                       type: 'number',
@@ -114,7 +94,6 @@ const handleSubmit = async (e) => {
                   ]}
                 />
               </div>
-
             </Col>
 
             <SimpleInputField
@@ -122,8 +101,6 @@ const handleSubmit = async (e) => {
                 { name: 'password', placeholder: t('Password'), type: 'password', title: 'Password', label: 'Password' },
               ]}
             />
-
-         
 
             <Col xs={12}>
               <div className='forgot-box'>
@@ -136,11 +113,9 @@ const handleSubmit = async (e) => {
               </div>
             </Col>
 
-            <FormBtn title={t('SignUp')} classes={{ btnClass: 'btn btn-animation w-100' }}  />
+            <FormBtn title={t('SignUp')} classes={{ btnClass: 'btn btn-animation w-100' }} disabled={isSubmitting} />
           </Form>
-       
-       )}
-
+        )}
       </Formik>
     </>
   );

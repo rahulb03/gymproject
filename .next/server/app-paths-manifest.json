@@ -1,8 +1,14 @@
 {
+  "/api/home/paris/route": "app/api/home/paris/route.js",
+  "/api/currency/route": "app/api/currency/route.js",
+  "/api/settings/route": "app/api/settings/route.js",
+  "/api/category/route": "app/api/category/route.js",
   "/api/self/route": "app/api/self/route.js",
-  "/[lng]/(mainLayout)/account/dashboard/page": "app/[lng]/(mainLayout)/account/dashboard/page.js",
+  "/api/blog/route": "app/api/blog/route.js",
+  "/api/themeOptions/route": "app/api/themeOptions/route.js",
+  "/api/product/route": "app/api/product/route.js",
+  "/[lng]/(mainLayout)/theme/paris/page": "app/[lng]/(mainLayout)/theme/paris/page.js",
+  "/[lng]/(mainLayout)/[...not-found]/page": "app/[lng]/(mainLayout)/[...not-found]/page.js",
   "/[lng]/(mainLayout)/auth/login/page": "app/[lng]/(mainLayout)/auth/login/page.js",
-  "/[lng]/(mainLayout)/account/bank-details/page": "app/[lng]/(mainLayout)/account/bank-details/page.js",
-  "/[lng]/(mainLayout)/auth/forgot-password/page": "app/[lng]/(mainLayout)/auth/forgot-password/page.js",
-  "/[lng]/(mainLayout)/auth/otp-verification/page": "app/[lng]/(mainLayout)/auth/otp-verification/page.js"
+  "/[lng]/(mainLayout)/auth/register/page": "app/[lng]/(mainLayout)/auth/register/page.js"
 }
