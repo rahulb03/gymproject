@@ -1,0 +1,8 @@
+{
+  "/api/self/route": "app/api/self/route.js",
+  "/[lng]/(mainLayout)/account/dashboard/page": "app/[lng]/(mainLayout)/account/dashboard/page.js",
+  "/[lng]/(mainLayout)/auth/login/page": "app/[lng]/(mainLayout)/auth/login/page.js",
+  "/[lng]/(mainLayout)/account/bank-details/page": "app/[lng]/(mainLayout)/account/bank-details/page.js",
+  "/[lng]/(mainLayout)/auth/forgot-password/page": "app/[lng]/(mainLayout)/auth/forgot-password/page.js",
+  "/[lng]/(mainLayout)/auth/otp-verification/page": "app/[lng]/(mainLayout)/auth/otp-verification/page.js"
+}

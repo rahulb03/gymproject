@@ -1,0 +1,97 @@
+{
+  "pages": {
+    "/[lng]/(mainLayout)/theme/paris/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/theme/paris/page.js"
+    ],
+    "/[lng]/(mainLayout)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/layout.js"
+    ],
+    "/[lng]/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[lng]/layout.css",
+      "static/chunks/app/[lng]/layout.js"
+    ],
+    "/[lng]/(mainLayout)/account/dashboard/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/account/dashboard/page.js"
+    ],
+    "/[lng]/(mainLayout)/[...not-found]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/[...not-found]/page.js"
+    ],
+    "/[lng]/(mainLayout)/auth/login/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[lng]/(mainLayout)/auth/login/page.css",
+      "static/chunks/app/[lng]/(mainLayout)/auth/login/page.js"
+    ],
+    "/[lng]/(mainLayout)/auth/register/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[lng]/(mainLayout)/auth/register/page.css",
+      "static/chunks/app/[lng]/(mainLayout)/auth/register/page.js"
+    ],
+    "/[lng]/(mainLayout)/account/notification/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/account/notification/page.js"
+    ],
+    "/[lng]/(mainLayout)/account/wallet/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/account/wallet/page.js"
+    ],
+    "/[lng]/(mainLayout)/account/bank-details/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/account/bank-details/page.js"
+    ],
+    "/[lng]/(mainLayout)/account/point/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/account/point/page.js"
+    ],
+    "/[lng]/(mainLayout)/account/order/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/account/order/page.js"
+    ],
+    "/[lng]/(mainLayout)/account/refund/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/account/refund/page.js"
+    ],
+    "/[lng]/(mainLayout)/account/addresses/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/account/addresses/page.js"
+    ],
+    "/[lng]/(mainLayout)/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/page.js"
+    ],
+    "/[lng]/(mainLayout)/compare/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/compare/page.js"
+    ],
+    "/[lng]/(mainLayout)/auth/forgot-password/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/auth/forgot-password/page.js"
+    ],
+    "/[lng]/(mainLayout)/auth/otp-verification/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[lng]/(mainLayout)/auth/otp-verification/page.js"
+    ]
+  }
+}
