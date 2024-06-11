@@ -7,6 +7,8 @@
   "/api/blog/route": "app/api/blog/route.js",
   "/api/product/route": "app/api/product/route.js",
   "/[lng]/(mainLayout)/theme/paris/page": "app/[lng]/(mainLayout)/theme/paris/page.js",
+  "/[lng]/(mainLayout)/[...not-found]/page": "app/[lng]/(mainLayout)/[...not-found]/page.js",
+  "/[lng]/(mainLayout)/auth/login/page": "app/[lng]/(mainLayout)/auth/login/page.js",
   "/[lng]/(mainLayout)/auth/register/page": "app/[lng]/(mainLayout)/auth/register/page.js",
-  "/[lng]/(mainLayout)/[...not-found]/page": "app/[lng]/(mainLayout)/[...not-found]/page.js"
+  "/[lng]/(mainLayout)/page": "app/[lng]/(mainLayout)/page.js"
 }
